@@ -17,7 +17,7 @@ Feature: Weather Station
     Given the user prepare station submit request with following details: <external_id> <name> <latitude> <longitude> <altitude>
     When the user execute register a weather station with an API key
     Then the user validate register a weather station api status code: 201
-    Given the user execute fetch a weather station to validate registered weather station
+    When the user execute fetch a weather station to validate registered weather station
     Then the user validate fetch a weather station api status code: 200
     And the user verify success response by fetch to validate weather station registration details: <external_id> <name> <latitude> <longitude> <altitude>
     Examples:
