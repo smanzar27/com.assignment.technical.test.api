@@ -11,7 +11,7 @@ import io.cucumber.testng.CucumberOptions;
                     }
         ,   features = "src/test/resources/feature"
         ,   glue = {"com.assignment.technical.test.api.stepdefinition"}
-        ,   tags = "@TestMe"
+        ,   tags = "@Station"
         ,   monochrome = true
 )
 
