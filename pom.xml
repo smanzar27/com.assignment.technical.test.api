@@ -116,7 +116,7 @@
                         </goals>
                         <configuration>
                             <skip>${skip-maven-cucumber-reporting}</skip>
-                            <projectName>Vagrant Test Result</projectName>
+                            <projectName>API Test Assignment Result</projectName>
                             <outputDirectory>${project.build.directory}</outputDirectory>
                             <inputDirectory>target</inputDirectory>
                             <jsonFiles>
