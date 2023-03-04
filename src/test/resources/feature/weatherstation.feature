@@ -22,4 +22,5 @@ Feature: Weather Station
     And the user verify success response by fetch to validate weather station registration details: <external_id> <name> <latitude> <longitude> <altitude>
     Examples:
       | external_id  | name                       | latitude | longitude | altitude |
-      | DEMO_TEST001 | Team Demo Test Station 001 | 1    | 2   | 3      |
+      | DEMO_TEST001 | Team Demo Test Station 001 | 33.33    | -122.43   | 222      |
+      | DEMO_TEST001 | Team Demo Test Station 002 | 44.44    | -122.44   | 111      |
