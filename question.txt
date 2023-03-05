@@ -1,0 +1,34 @@
+Questions
+1.	What other scenarios would you suggest for the given page? List 3-5 suggestions.
+a)	On toggling between single and joint button, “Work out how much I could borrow” button is enabled each time after a user gets an estimate and on clicking get a fresh estimate
+b)	On toggling between live-in and residential buttons, the  “Work out how much I could borrow” button is enabled each time after a user gets an estimate and on clicking get a fresh estimate
+c)	Currency fields should accept only positive numeric values. (alphabet and special characters not allowed), even decimal is not allowed.
+d)	Validate the length of digit accepted in currency value: Ex Your annual income accepts max 7 of  digits while other annual income accepts 55 digits in its field.
+e)	Repeat the test in the assignment for different dependents and the estimate value should get decreased
+
+
+2.	If this test was part of a much larger test suite, how could you run a specific test or subset/group of tests?
+a)	Estimate based on application type as Scenario Outline, where test case will be iterated based on Single or Joint and with a different set of dependent in each run
+b)	Estimate based on property type as Scenario Outline, where test case will be iterated based on live-in or residential and with a different set of dependent in each run
+c)	Validate of numeric fields can be merged in one Cucumber Scenario and fields list to be passed as Data Table and each will be validated against its accepted digit length and check against alphabet and special characters
+
+3.	Which approaches could be used to reduce the overall execution time? Describe how they could be implemented into your code base.
+a)	Use fluent-wait and explicit wait against implicit and Thread.sleep
+b)	Avoid using xpath, identification of element to be done by id, name, or class is best case, xpath to be the last resort.
+c)	Run in headless mode as they are faster
+d)	Use API/libraries to generate test data.
+e)	Test case to be independent so that they can execute in Parallel
+f)	Get code review prior to merging in the automation suite
+
+
+4.	Sometimes UI tests can fail unpredictably. For example, the page may not have fully loaded before the automated test attempts to click a button on a web page. How would you improve the reliability of these tests without increasing execution time?
+Selenium wait commands are beneficial as it will throw element_not_visible when it cannot locate an element to run the test and move on to the next test case execution.
+a)	implicit-wait tell WebDriver to wait for a specific time before proceeding with the next element,  to be used when page and element load time is known
+b)	explicit-wait instruct the webdriver to pause a test until a predetermined condition is met, for a specific duration as tester cannot wait infinite. If the mentioned condition is met before that, the test will proceed, If not, it will wait the whole duration.
+c)	fluent-wait is where both duration and frequency is used to check a specific has being met. To be on used on those elements which are loaded dynamically on user actions
+
+5.	From your experience, what is the focus of UI automation testing – Integration, Functional or Acceptance testing? Briefly explain why.
+All of these:
+a)	GUI is a user interface where a product interacts with the Customer, each product interface has its own functionality that needs to be tested by validating main functionalities and error conditions. GUI Automation helps to execute and covers all the functionality and helps in reducing testing effort and cost. However, there are some cases where Manual Automation is preferred over Automation.
+b)	GUI interacts with backends Microservices or APIs and displays results in GUI, in this case, the GUI application is under automation to validate the data on GUI with expected data coming from API or web services. For example, getAccountBalance is an API that is a common source of data displayed on both Web and Mobile GUI
+c)	UAT can be automated where automation scripts are written  to execute and send the binary-based result yes for accepted or no for rejected
