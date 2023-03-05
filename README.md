@@ -21,10 +21,13 @@ Take CheckOut	: 	git clone https://github.com/smanzar27/com.assignment.technical
 
 Goto CheckOut Folder:
 Run TestCode:			
+
 a) Test Assignment 
 mvn clean verify -Dtest=CucumberRunner  -Dcucumber.filter.tags="@Station"
+
 b) Cleanup 
 mvn clean verify -Dtest=CucumberRunner  -Dcucumber.filter.tags="@Clean"
+
 c) Test Assignment and Cleanup
 mvn clean verify -Dtest=CucumberRunner  -Dcucumber.filter.tags="@API"
 
