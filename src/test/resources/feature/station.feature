@@ -1,5 +1,5 @@
-@Station
-Feature: Weather Station
+@Station @API
+Feature: Weather Station Registration
   Description: Adding and Fetching New Station via Open API
 
   Scenario Outline: verify invalid key is return when the user register a weather station without an API key

@@ -84,6 +84,22 @@ public class BaseRestService {
     }
 
 
+    public Response delete(RequestSpecification requestSpecification, String endPoint){
+        System.out.println("EndPoint Execution: "  + endPoint);
+        this.requestSpecification = requestSpecification;
+        Response response = requestSpecification.delete(endPoint);
+        this.response = response;
+        return response;
+    }
+
+    public Response delete(List<Header> headers, String endPoint, Map<String,String> params){
+        System.out.println("Executing API: "  + endPoint);
+        RequestSpecification requestSpecification =     setBaseRequestSpecification()
+                .headers(new Headers(headers))
+                .queryParams(setUserAPIKEY(params));
+        response = delete(requestSpecification,endPoint);
+        return response;
+    }
 
 
     public Response getResponse() { return this.response;}

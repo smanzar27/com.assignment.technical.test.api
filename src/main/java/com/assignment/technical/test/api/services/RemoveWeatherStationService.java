@@ -9,11 +9,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class FetchWeatherStationService extends BaseRestService {
+public class RemoveWeatherStationService extends BaseRestService {
 
     public final String apiEndPoint = "/data/3.0/stations";
 
-    public FetchWeatherStationService(){
+    public RemoveWeatherStationService(){
         try {
             base_uri = new URL(ReaderManager.getInstance().getApiConfigReader().getAPIBaseURI());
         } catch (MalformedURLException e) {
@@ -23,10 +23,6 @@ public class FetchWeatherStationService extends BaseRestService {
 
     public String  setEndPoint(String recordID) {
         return apiEndPoint.concat("/").concat(recordID);
-    }
-
-    public String  setEndPoint() {
-        return apiEndPoint;
     }
 
     public Map<String,String> setQueryParams(){
