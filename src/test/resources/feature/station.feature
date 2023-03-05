@@ -23,4 +23,4 @@ Feature: Weather Station Registration
     Examples:
       | external_id  | name                       | latitude | longitude | altitude |
       | DEMO_TEST001 | Team Demo Test Station 001 | 33.33    | -122.43   | 222      |
-      | DEMO_TEST001 | Team Demo Test Station 002 | 44.44    | -122.44   | 111      |
+      | DEMO_TEST002 | Team Demo Test Station 002 | 44.44    | -122.44   | 111      |
